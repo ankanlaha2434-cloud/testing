@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Enfield | Premium About</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:black;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero video{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    top:0;
+    left:0;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    top:0;
+    left:0;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.hero-content h1{
+    font-size:60px;
+    letter-spacing:5px;
+    background:linear-gradient(90deg,#800000,#b8860b);
+    background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-content p{
+    margin-top:20px;
+    font-size:20px;
+    max-width:700px;
+    color:#ddd;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Explore Button */
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 30px;
+    border:2px solid #b8860b;
+    color:#b8860b;
+    text-decoration:none;
+    transition:0.4s;
+}
+
+.btn:hover{
+    background:#b8860b;
+    color:black;
+}
+
+/* Scroll Indicator */
+.scroll{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:14px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,20%,50%,80%,100%{transform:translate(-50%,0);}
+    40%{transform:translate(-50%,-10px);}
+    60%{transform:translate(-50%,-5px);}
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about{
+    padding:100px 10%;
+    background:#111;
+    text-align:center;
+}
+
+.about h2{
+    font-size:40px;
+    margin-bottom:30px;
+    color:#b8860b;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    color:#ccc;
+}
+
+/* ================= MODELS SECTION ================= */
+
+.models{
+    padding:100px 8%;
+    background:black;
+}
+
+.models h2{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:40px;
+    color:#b8860b;
+}
+
+.model-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:0.6s;
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.card-content{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    background:linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.card-content h3{
+    margin-bottom:5px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111;
+    color:#777;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero-content h1{
+        font-size:38px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <video autoplay muted loop playsinline>
+        <source src="./..//image royal/benner videos.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-content">
+        <h1>ROYAL ENFIELD</h1>
+        <p>
+            Since 1901 • Made Like A Gun <br>
+            Built on heritage. Powered by passion.
+        </p>
+        <a href="#models" class="btn">Explore Models</a>
+    </div>
+
+    <div class="scroll">Scroll Down ↓</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>About Our Legacy</h2>
+    <p>
+        Royal Enfield stands for timeless design, unmatched torque
+        and pure riding experience. From city streets to mountain roads,
+        it is built for riders who seek emotion, adventure and brotherhood.
+    </p>
+</section>
+
+<!-- MODELS -->
+<section class="models" id="models">
+    <h2>From 1901</h2>
+
+    <div class="model-grid">
+
+        <div class="card">
+            <img src="./image royal/hq720.jpg" alt="">
+            <div class="card-content">
+                <h3></h3>
+                <p>– Not just built, but born legendary.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="" alt="">
+            <div class="card-content">
+                <h3>1901-TILL NOW</h3>
+                <p>Modern roadster attitude</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="" alt="">
+            <div class="card-content">
+                <h3>SERVICES</h3>
+                <p>Built for adventure</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+© 2026 Royal Enfield | Heritage Meets Horsepower
+</footer>
+
+</body>
+</html>
